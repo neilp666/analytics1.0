@@ -11,39 +11,45 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :job_title %><br>
-    <%= f.text_field :job_title %>
+
+  <h4>job listing will remain on this site for 45 days. After 45 days your job listing will expire and be removed.</h4>
+  
+  <br/>
+<legend>1. Enter your job information</legend>
+  <div class="form-group">
+    <%= f.label "job title" %>
+    <%= f.text_field :job_title, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :job_description %><br>
-    <%= f.text_area :job_description %>
+  <div class="form-group">
+    <%= f.label :job_description %>
+    <%= f.text_area :job_description, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :job_location %><br>
-    <%= f.text_field :job_location %>
+  <div class="form-group">
+    <%= f.label :job_location %>
+    <%= f.text_field :job_location, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :job_applyto %><br>
-    <%= f.text_field :job_applyto %>
+  <div class="form-group">
+    <%= f.label :job_applyto %>
+    <%= f.text_field :job_applyto, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :company_name %><br>
-    <%= f.text_field :company_name %>
+  <div class="form-group">
+    <%= f.label :company_name %>
+    <%= f.text_field :company_name, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :company_website %><br>
-    <%= f.text_field :company_website %>
+  <div class="form-group">
+    <%= f.label :company_website %>
+    <%= f.text_field :company_website, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :company_about %><br>
-    <%= f.text_area :company_about %>
+  <div class="form-group">
+    <%= f.label :company_about %>
+    <%= f.text_area :company_about, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :company_email %><br>
-    <%= f.text_field :company_email %>
+  <div class="form-group">
+    <%= f.label :company_email %>
+    <%= f.text_field :company_email , class: "form-control" %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <%= f.submit class: "btn btn-primary" %>
   </div>
 <% end %>
+

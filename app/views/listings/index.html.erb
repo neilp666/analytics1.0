@@ -1,41 +1,21 @@
-<h1>Listing listings</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Job title</th>
-      <th>Job description</th>
-      <th>Job location</th>
-      <th>Job applyto</th>
-      <th>Company name</th>
-      <th>Company website</th>
-      <th>Company about</th>
-      <th>Company email</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @listings.each do |listing| %>
-      <tr>
-        <td><%= listing.job_title %></td>
-        <td><%= listing.job_description %></td>
-        <td><%= listing.job_location %></td>
-        <td><%= listing.job_applyto %></td>
-        <td><%= listing.company_name %></td>
-        <td><%= listing.company_website %></td>
-        <td><%= listing.company_about %></td>
-        <td><%= listing.company_email %></td>
-        <td><%= link_to 'Show', listing %></td>
-        <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
-        <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<div class="row">
+    <div class="center">
+        <h1>Find a Great Job in the Web Analytics Industry</h1>
+          <h2>We only show open analytics jobs to make your search easy</h2>
+          <h3>Follow us on Twitter <span class="emphasis">@WorkinAnalytics</span> </h3>
+          <br>
+           <%= link_to "Post a job Today: $169 for 45 days", new_listing_path , class: "btn btn-danger btn-lg", data: { no_turbolink: true } %>
+    </div>
+</div>
 <br>
 
-<%= link_to 'New Listing', new_listing_path %>
+<table class="table table-hover">
+   <% @listings.each do |listing| %>
+      <tr>
+        <th><h3><%= listing.company_name %></h3></th>
+        <th><h3><%= link_to listing.job_title, listing %></h3></th>
+        <th><h3><%= listing.created_at.strftime("%B %-d, %Y") %></h3></th>
+      </tr>
+    <% end %>
+</table>
+
