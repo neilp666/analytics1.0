@@ -1,0 +1,49 @@
+<%= form_for(@listing) do |f| %>
+  <% if @listing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
+
+      <ul>
+      <% @listing.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :job_title %><br>
+    <%= f.text_field :job_title %>
+  </div>
+  <div class="field">
+    <%= f.label :job_description %><br>
+    <%= f.text_area :job_description %>
+  </div>
+  <div class="field">
+    <%= f.label :job_location %><br>
+    <%= f.text_field :job_location %>
+  </div>
+  <div class="field">
+    <%= f.label :job_applyto %><br>
+    <%= f.text_field :job_applyto %>
+  </div>
+  <div class="field">
+    <%= f.label :company_name %><br>
+    <%= f.text_field :company_name %>
+  </div>
+  <div class="field">
+    <%= f.label :company_website %><br>
+    <%= f.text_field :company_website %>
+  </div>
+  <div class="field">
+    <%= f.label :company_about %><br>
+    <%= f.text_area :company_about %>
+  </div>
+  <div class="field">
+    <%= f.label :company_email %><br>
+    <%= f.text_field :company_email %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
