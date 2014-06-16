@@ -1,5 +1,4 @@
-<%= image_tag @listing.image.url %>
-
+ <p><%= image_tag @listing.image.url(:thumb) %></p>
 <p>
   <strong>Job title:</strong>
   <%= @listing.job_title %>
@@ -24,6 +23,7 @@
   <strong>Company name:</strong>
   <%= @listing.company_name %>
 </p>
+
 
 <p>
   <strong>Company website:</strong>
