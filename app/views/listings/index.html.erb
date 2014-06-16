@@ -15,6 +15,9 @@
         <th><h3><%= listing.company_name %></h3></th>
         <th><h3><%= link_to listing.job_title, listing %></h3></th>
         <th><h3><%= listing.created_at.strftime("%B %-d, %Y") %></h3></th>
+        <td><%= link_to 'Show', listing, class: "btn btn-link" %></td>
+        <td><%= link_to 'Edit', edit_listing_path(listing), class: "btn btn-link" %></td>
+        <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>
       </tr>
     <% end %>
 </table>
